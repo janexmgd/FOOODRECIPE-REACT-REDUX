@@ -1,0 +1,38 @@
+@font-face {
+    font-family: airbnb;
+    src: url(../font/AirbnbCereal_W_Md.woff)
+}
+
+.navbar {
+    display: flex;
+    font-family: airbnb;
+    top: 20px;
+    height: 10vh;
+}
+
+.navbar ul {
+    margin-top: 19px;
+    height: 5vh;
+    display: flex;
+    list-style-type: none;
+    background-color: white;
+}
+
+.navbar ul li {
+    padding: 10px;
+    text-decoration: none;
+    color: #2E266F;
+}
+
+.navbarLink {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar ul li {
+        padding: 10px;
+        font-size: 10px;
+        text-decoration: none;
+        color: #2E266F;
+    }
+}

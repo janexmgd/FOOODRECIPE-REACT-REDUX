@@ -1,0 +1,510 @@
+@font-face {
+    font-family: airbnb;
+    src: url(../font/AirbnbCereal_W_Md.woff);
+}
+
+.body {
+    margin: 0px;
+    padding: 0px;
+    font-family: airbnb;
+}
+
+.navbar {
+    height: 10vh;
+    display: flex;
+    z-index: 99999;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.primaryMenu {
+    width: 70%;
+    height: 10vh;
+    background-color: white;
+}
+
+.primaryMenu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.primaryMenu ul li {
+    padding: 20px;
+    padding-top: 25px;
+}
+
+.primaryMenu ul li :link {
+    text-decoration: none;
+    color: #2E266F;
+}
+
+.secondaryMenu {
+    width: 30%;
+    height: 10vh;
+    background-color: rgba(239, 200, 26, 1);
+}
+
+.secondaryMenu ul {
+    list-style-type: none;
+}
+
+.secondaryMenu ul li {
+    padding: 20px;
+    padding-top: 25px;
+    padding-left: 8vw;
+}
+
+.secondaryMenuLink {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.secondaryMenu .icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+.intro {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.content {
+    height: 100vh;
+    background-color: white;
+    width: 70%;
+}
+
+.jumbotron {
+    position: absolute;
+    top: 230px;
+    left: 100px;
+}
+
+.jumbotron h1 {
+    font-size: 40px;
+    width: 52%;
+    color: #2E266F;
+}
+
+.formGroup {
+    display: flex;
+    height: 50px;
+    width: 400px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+}
+
+.iconSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.formGroup input {
+    background-color: rgb(239, 239, 239);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    color: black;
+}
+
+.formGroup input:focus {
+    outline: none;
+}
+
+.decoration {
+    height: 110vh;
+    width: 30%;
+    background-color: rgba(239, 200, 26, 1);
+}
+
+.decoration img {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 170px;
+    right: 240px;
+}
+
+
+/* style section 2 */
+
+.intro2 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftContent {
+    height: 100vh;
+    width: 50%;
+}
+
+.jumbotron2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.jumbotron2 img {
+    margin-left: 25px;
+    width: 400px;
+    height: 400px;
+    padding-top: 40px;
+    z-index: 999;
+}
+
+.outline {
+    margin-top: 160px;
+    margin-left: 60px;
+    width: 400px;
+    height: 400px;
+    outline: 1px solid #EFC81A;
+    position: absolute;
+}
+
+.greeting2 {
+    margin-top: 15px;
+    margin-left: 25px;
+    /* width: 50%; */
+    height: 9vh;
+    border-left: 10px solid #EFC81A;
+    display: flex;
+    align-items: center;
+}
+
+.greeting2 h1 {
+    margin-left: 7px;
+    color: #3F3A3A;
+}
+
+.jumbotron3 {
+    position: absolute;
+    top: 135vh;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jumbotron3 h1 {
+    color: #3F3A3A;
+    font-size: 30px;
+    width: 60%;
+}
+
+.line {
+    width: 50px;
+    height: 50px;
+    padding-top: 70px;
+    border-bottom: 4px solid #6F6A40;
+    position: absolute;
+}
+
+.jumbotron3 h2 {
+    padding-top: 5px;
+    color: #3F3A3A;
+    font-size: 15px;
+    width: 54%;
+}
+
+.jumbotron3Link {
+    margin-top: 15px;
+}
+
+.jumbotron3Link button {
+    width: 100px;
+    height: 32px;
+    text-align: center;
+    border: none;
+    background-color: #EFC81A;
+    font-family: airbnb;
+    color: white;
+}
+
+
+/* style section 3 */
+
+.container3Intro {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container3IntroLeftContent {
+    height: 100vh;
+    width: 50%;
+}
+
+.container3IntroLeftContentJumbotron {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.container3IntroLeftContentJumbotron img {
+    margin-left: 25px;
+    width: 400px;
+    height: 400px;
+    margin-top: 70px;
+    z-index: 99;
+}
+
+.container3IntroLeftContentJumbotronGreeting {
+    margin-top: 15px;
+    margin-left: 25px;
+    /* width: 50%; */
+    height: 9vh;
+    border-left: 10px solid #EFC81A;
+    display: flex;
+    align-items: center;
+}
+
+.container3IntroLeftContentJumbotronGreeting h1 {
+    margin-left: 7px;
+    color: #3F3A3A;
+}
+
+.container3IntroLeftContentJumbotronOutline {
+    margin-top: 100px;
+    margin-right: 80vh;
+    width: 240px;
+    height: 400px;
+    background-color: #EFC81A;
+    position: absolute;
+}
+
+.container3IntroRightContentJumbotron {
+    position: absolute;
+    top: 240vh;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container3IntroRightContentJumbotron h1 {
+    color: #3F3A3A;
+    font-size: 30px;
+    width: 60%;
+}
+
+.container3IntroRightContentJumbotron h2 {
+    padding-top: 5px;
+    color: #3F3A3A;
+    font-size: 15px;
+    width: 54%;
+}
+
+.container3IntroRightContentJumbotronLine {
+    width: 50px;
+    height: 50px;
+    padding-top: 70px;
+    border-bottom: 4px solid #6F6A40;
+    position: absolute;
+}
+
+.container3IntroRightContentJumbotronLink {
+    margin-top: 15px;
+}
+
+.container3IntroRightContentJumbotronLink button {
+    width: 100px;
+    height: 32px;
+    text-align: center;
+    border: none;
+    background-color: #EFC81A;
+    font-family: airbnb;
+    color: white;
+}
+
+
+/* style section 4 */
+
+.container4Intro {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container4IntroTopContent {
+    height: 20vh;
+    width: 100%;
+}
+
+.container4IntroTopContentJumbotron {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.container4IntroTopContentJumbotronGreeting {
+    margin-top: 15px;
+    margin-left: 25px;
+    width: 100%;
+    height: 9vh;
+    border-left: 10px solid #EFC81A;
+    display: flex;
+    align-items: center;
+}
+
+.container4IntroTopContentJumbotronGreeting h1 {
+    margin-left: 7px;
+    color: #3F3A3A;
+}
+
+.container4IntroBottomContentJumbotron {
+    height: 80vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.titleRecipe {
+    position: absolute;
+    width: 30%;
+    margin-top: 200px;
+    font-size: 30px;
+    margin-right: 150px;
+    color: #EFC81A;
+}
+
+@media only screen and (max-width: 600px) {
+    .primaryMenu ul li {
+        padding: 5px;
+    }
+    .jumbotron {
+        position: absolute;
+        top: 85px;
+        left: 40px;
+    }
+    .jumbotron h1 {
+        font-size: 15px;
+        width: 52%;
+        color: #2E266F;
+    }
+    .formGroup {
+        display: flex;
+        height: 25px;
+        width: 150px;
+        background-color: rgb(239, 239, 239);
+        border-radius: 10px;
+    }
+    .decoration img {
+        width: 175px;
+        height: 175px;
+        position: absolute;
+        top: 200px;
+        right: 40px;
+    }
+    /* style section 2 */
+    .jumbotron2 img {
+        margin-left: 25px;
+        width: 180px;
+        height: 180px;
+        padding-top: 40px;
+        z-index: 999;
+    }
+    .outline {
+        margin-top: 140px;
+        margin-left: 60px;
+        width: 180px;
+        height: 180px;
+        outline: 1px solid #EFC81A;
+        position: absolute;
+    }
+    .jumbotron3 {
+        left: 25px;
+        margin-top: 150px;
+    }
+    .jumbotron3 h1 {
+        color: #3F3A3A;
+        font-size: 15px;
+        width: 60%;
+    }
+    .jumbotron3 h2 {
+        padding-top: 5px;
+        color: #3F3A3A;
+        font-size: 8px;
+        width: 54%;
+    }
+    .line {
+        width: 25px;
+        height: 25px;
+        padding-top: 35px;
+        border-bottom: 4px solid #6F6A40;
+        position: absolute;
+    }
+    .jumbotron3Link button {
+        width: 100px;
+        height: 32px;
+        text-align: center;
+        border: none;
+        background-color: #EFC81A;
+        font-family: airbnb;
+        color: white;
+    }
+    /* style section 3 */
+    .container3IntroLeftContentJumbotron img {
+        margin-left: 25px;
+        width: 180px;
+        height: 180px;
+        padding-top: 40px;
+        z-index: 999;
+    }
+    .container3IntroLeftContentJumbotronOutline {
+        margin-top: 100px;
+        margin-right: 80vh;
+        width: 150px;
+        height: 180px;
+        background-color: #EFC81A;
+        position: absolute;
+    }
+    .container3IntroRightContentJumbotron {
+        left: 25px;
+        margin-top: 150px;
+    }
+    .container3IntroRightContentJumbotron h1 {
+        color: #3F3A3A;
+        font-size: 15px;
+        width: 60%;
+    }
+    .container3IntroRightContentJumbotron h2 {
+        padding-top: 5px;
+        color: #3F3A3A;
+        font-size: 8px;
+        width: 54%;
+    }
+    .container3IntroRightContentJumbotronLine {
+        width: 25px;
+        height: 25px;
+        padding-top: 35px;
+        border-bottom: 4px solid #6F6A40;
+        position: absolute;
+    }
+    /* style section 4 */
+    .container4IntroBottomContentJumbotronPhotoLg img {
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+    }
+}

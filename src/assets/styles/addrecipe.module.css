@@ -1,0 +1,228 @@
+@font-face {
+    font-family: airbnb;
+    src: url(../font/AirbnbCereal_W_Md.woff)
+}
+
+.container {
+    font-family: airbnb;
+    padding-top: 25vh;
+    width: 100%;
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formPhoto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F5F4;
+    width: 100vh;
+    height: 40vh;
+}
+
+.formPhotoImg {
+    width: 32px;
+    height: 32px;
+}
+
+.formPhotoInput {
+    margin-top: 10px;
+    width: 10%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formPhotoInput::-webkit-file-upload-button {
+    visibility: hidden;
+    display: block;
+}
+
+.formPhotoInput::before {
+    text-align: center;
+    content: 'Add Photo';
+    color: #666666;
+    font-size: 10px;
+}
+
+.formPhotoInput:hover::before {
+    border-color: black;
+}
+
+.formPhotoInput:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.formTitle {
+    margin-top: 25px;
+    background-color: #F6F5F4;
+    width: 100vh;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formTitleH1 {
+    color: #666666;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.formTitleInput {
+    width: 90vh;
+    height: 4vh;
+    border: none;
+    background-color: #F6F5F4;
+    padding-right: 10px;
+}
+
+.formTitleInput:focus {
+    outline: none;
+}
+
+.formIngredients {
+    margin-top: 25px;
+    background-color: #F6F5F4;
+    width: 100vh;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formIngredients h1 {
+    padding-bottom: 25vh;
+    padding-left: 2vh;
+    color: #666666;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.formIngredients textarea {
+    width: 90vh;
+    height: 30vh;
+    padding-bottom: 25vh;
+    border: none;
+    background-color: #F6F5F4;
+    padding-right: 5px;
+    text-align: left;
+    white-space: break-spaces;
+    overflow: hidden;
+    resize: none;
+}
+
+.formIngredients textarea:focus {
+    outline: none;
+}
+
+.formVideo {
+    margin-top: 25px;
+    background-color: #F6F5F4;
+    width: 100vh;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formVideo h1 {
+    color: #666666;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.formVideo input {
+    width: 90vh;
+    height: 6vh;
+    border: none;
+    background-color: #F6F5F4;
+    padding-right: 5px;
+}
+
+.formVideo input:focus {
+    outline: none;
+}
+
+.jumbotron button {
+    font-family: airbnb;
+    color: white;
+    margin-top: 60px;
+    width: 50vh;
+    height: 5vh;
+    border: none;
+    background-color: #EFC81A;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding-top: 15vh;
+        width: 100%;
+        height: 100vh;
+    }
+    .formPhoto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #F6F5F4;
+        width: 50vh;
+        height: 20vh;
+    }
+    .formPhotoImg {
+        width: 16px;
+        height: 16px;
+    }
+    .formPhotoInput::before {
+        display: none;
+    }
+    .formTitle {
+        margin-top: 15px;
+        width: 50vh;
+        height: 4vh;
+    }
+    .formTitle h1 {
+        color: #666666;
+        font-size: 10px;
+        font-weight: lighter;
+    }
+    .formIngredients {
+        margin-top: 25px;
+        background-color: #F6F5F4;
+        width: 50vh;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .formIngredients h1 {
+        font-size: 10px;
+    }
+    .formVideo {
+        width: 50vh;
+        height: 3vh;
+    }
+    .formVideo h1 {
+        color: #666666;
+        font-size: 10px;
+        font-weight: lighter;
+    }
+    .jumbotron button {
+        font-family: airbnb;
+        color: white;
+        margin-top: 40px;
+        width: 50vh;
+        height: 5vh;
+        border: none;
+        background-color: #EFC81A;
+    }
+}

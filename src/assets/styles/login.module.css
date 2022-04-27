@@ -1,0 +1,164 @@
+@font-face {
+    font-family: airbnb;
+    src: url(../font/AirbnbCereal_W_Lt.woff);
+}
+
+.container {
+    font-family: airbnb;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.loginContainer {
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginGreeting {
+    font-size: 45px;
+    color: rgba(239, 200, 26, 1);
+    font-weight: bold;
+}
+
+.loginSub {
+    font-size: 25px;
+    padding-bottom: 20px;
+    font-weight: normal;
+    color: rgba(134, 146, 166, 1);
+}
+
+.loginInput {
+    color: rgba(105, 111, 121, 1);
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.a {
+    padding-bottom: 5px;
+}
+
+.b {
+    padding-bottom: 9px;
+}
+
+.c {
+    padding-bottom: 5px;
+}
+
+.textType {
+    color: rgba(105, 111, 121, 1);
+}
+
+.textType input {
+    font-family: airbnb-cereal;
+    width: 470px;
+    height: 40px;
+    margin-bottom: 4px;
+    border: none;
+    border: 1px solid #8692A6;
+}
+
+.textType input:focus {
+    outline: none !important;
+    border: 1px solid rgba(239, 200, 26, 1);
+}
+
+.textType input::placeholder {
+    color: rgba(134, 146, 166, 1);
+    font-family: airbnb;
+}
+
+.checkboxContainer {
+    padding-top: 20px;
+    width: 100%;
+    border-width: 1px;
+    display: flex;
+    flex-direction: row;
+}
+
+.checkboxInput {
+    accent-color: rgba(239, 200, 26, 1);
+}
+
+.checkboxDialog {
+    color: rgba(134, 146, 166, 1);
+}
+
+.submitButton {
+    padding-top: 10px;
+}
+
+.submitButton button {
+    font-family: airbnb-cereal;
+    width: 470px;
+    height: 40px;
+    background: rgba(239, 200, 26, 1);
+    border-style: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.forgotPassword {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgotPasswordLink {
+    color: rgba(153, 153, 153, 1);
+    text-decoration: none;
+}
+
+.signup {
+    width: 100%;
+    padding-top: 20px;
+    color: rgba(153, 153, 153, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup2Link {
+    margin-left: 2px;
+    color: rgba(239, 200, 26, 1);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+        font-family: airbnb;
+        display: flex;
+    }
+    .loginContainer {
+        width: 100%;
+        display: flex;
+    }
+    .loginGreeting {
+        font-size: 20px;
+    }
+    .loginSub {
+        font-size: 11px;
+    }
+    .textType input {
+        width: 230px;
+        height: 20px;
+    }
+    .submitButton button {
+        width: 230px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: airbnb;
+    src: url(../font/AirbnbCereal_W_Md.woff);
+}
+
+.decoration {
+    height: auto;
+    overflow: hidden;
+    font-family: airbnb;
+    width: 50%;
+    background-image: url(https://s3-alpha-sig.figma.com/img/86b2/055d/76c7e3577554580136d5f65222046a21?Expires=1651449600&Signature=dytVXWzptjvHD~UzOLeSIjVAJQ73mwS19HvwgQmJ9cYHHsvmqhd-EuimwDT-iWCHEZTNjmEvtD0PHMtO6EUGmGfZvbEVguHFwUYSBOA1wrg8xbx5wxQnx4jRsC1JRJdV05N1nS59jlW7cwqVGYtSAfJ7txwivgSzWcdHXoTQEyBRPk3cS5qiINsmLRBHpmVeDfIy9VF0chPL1pBh6LTFQC03-tG91lLN5H0j9zfTjMymlvDh9dxlz-7h21Rfs7wAZlvc3GjLm3sgxzNPUUOm7MzgjpyGdkneSllxKiYX7L2WOasZGkIdXP1zTuKG~Px0sd1aeq5hyk7Xb8f2vYAj6A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.decoration::after {
+    content: "";
+    width: 50%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(239, 200, 26, 0.852);
+    position: absolute;
+}
+
+.logoContainer {
+    font-family: airbnb-cereal;
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoText {
+    color: white;
+    font-size: 25px;
+    font-family: airbnb;
+}
+
+.logoImg img {
+    width: 75px;
+    height: 75px;
+}
+
+@media screen and (max-width: 600px) {
+    .decoration {
+        display: none;
+    }
+}

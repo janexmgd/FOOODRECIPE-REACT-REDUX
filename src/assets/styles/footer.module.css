@@ -1,0 +1,118 @@
+@font-face {
+    font-family: airbnb;
+    src: url(../font/AirbnbCereal_W_Md.woff);
+}
+
+footer {
+    font-family: airbnb;
+    margin-top: 30vh;
+    height: 40vh;
+    width: 100%;
+    background-color: #EFC81A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerJumbotron {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 100;
+    color: #2E266F;
+}
+
+footer h2 {
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70%;
+    font-weight: 100;
+    color: #707070;
+}
+
+footer ul {
+    padding-left: 2px;
+    display: flex;
+    list-style: none;
+    padding-top: 30vh;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    padding: 2px;
+    font-size: 8px;
+}
+
+.footerLink {
+    text-decoration: none;
+    color: #707070;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        font-family: airbnb;
+        margin-top: 35px;
+        height: 20vh;
+        width: 100%;
+        background-color: #EFC81A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerJumbotron {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 100;
+        color: #2E266F;
+    }
+    footer h2 {
+        margin-top: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35%;
+        font-weight: 100;
+        color: #707070;
+    }
+    footer ul {
+        padding-left: 2px;
+        display: flex;
+        list-style: none;
+        padding-top: 15vh;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+    }
+    footer ul li {
+        padding: 2px;
+        font-size: 4px;
+    }
+    .footerLink {
+        text-decoration: none;
+        color: #707070;
+    }
+}
