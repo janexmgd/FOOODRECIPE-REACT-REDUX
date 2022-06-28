@@ -4,7 +4,7 @@ const initialState = {
   isError: false,
 };
 
-//pending,fullfilled,rejected
+// pending,fullfilled,rejected
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case "GET_LIST_USERS_PENDING":

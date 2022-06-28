@@ -4,7 +4,7 @@ const initialState = {
   isError: false,
 };
 
-//pending,fullfilled,rejected
+// pending,fullfilled,rejected
 const detailRecipeReducer = (state = initialState, action) => {
   switch (action.type) {
     case "GET_DETAIL_RECIPE_PENDING":
