@@ -1,48 +1,44 @@
 .form {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    /*background-color: red;*/
 }
 
 .form button {
-    margin-left: 10px;
-    width: 40px;
-    height: 40px;
+    /*margin-left: 10px;*/
+    width: 5vh;
+    height: 5vh;
     background: rgba(239, 200, 26, 1);
     border-style: none;
     color: rgba(255, 255, 255, 1);
-    border-radius: 50%;
+    /*border-radius: 50%;*/
 }
 
 .form input {
     text-align: center;
     width: 470px;
-    height: 39px;
+    height: 5vh;
     border: none;
     border: 1px solid #8692A6;
-    border-radius: 50px;
+    /*border-radius: 50px;*/
 }
 
-.form input:focus {
+
+/*.form input:focus {
     outline: none !important;
     border: 1px solid rgba(239, 200, 26, 1);
-}
+}*/
 
 .titleRecipe {
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
-    width: 30%;
-    height: auto;
-    margin-top: 150px;
+    width: 70%;
+    margin-top: 200px;
     font-size: 30px;
-    margin-left: 30px;
+    margin-right: 70px;
     color: #EFC81A;
-    font-weight: 100;
-    border-radius: 5px;
-    background-color: rgba(6, 6, 6, 0.49);
-    /* background-color: blue; */
+    background-color: #3f3a3aa2;
 }
 
 .noRecipe {

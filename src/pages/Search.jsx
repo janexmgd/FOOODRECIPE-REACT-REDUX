@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
+// import ReactPaginate from "react-paginate";
 import { useSelector, useDispatch } from "react-redux";
 import { getListRecipe } from "../redux/actions/getListRecipe";
+
+import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
+import { Code } from "react-content-loader";
 
 import styles from "../assets/styles/search.module.css";
 import Footer from "../components/Footer";
@@ -11,29 +15,46 @@ const Search = () => {
 	const [queryParams] = useSearchParams();
 	const search = queryParams.get("search") ? queryParams.get("search") : "";
 	const sort = queryParams.get("sort") ? queryParams.get("sort") : "";
+	const pages = queryParams.get("page") ? queryParams.get("page") : 1;
 	const navigate = useNavigate();
 	const [searchQuery, setSearchQuery] = useState(search);
 	// eslint-disable-next-line
 	const [sortQuery, setSortQuery] = useState(sort);
+	const [page, setPage] = useState(pages);
 	const listRecipe = useSelector((state) => {
 		return state.listRecipe;
 	});
+	// const pages = [];
+
+	// test pagination
+
+	const totalPage = listRecipe?.data?.data?.pagination?.totalPage;
+
 	const onSubmit = (e) => {
 		e.preventDefault();
-		navigate("/recipe?search=" + searchQuery);
-		dispatch(getListRecipe(searchQuery));
+		navigate(`/recipe?search=${searchQuery}&sort=${sortQuery}&page=${pages}`);
+		dispatch(getListRecipe(searchQuery, sortQuery, pages));
 	};
-	const onSort = (e) => {
-		e.preventDefault();
-		const Querysort = document.getElementById("sort").options[0].value;
-		console.log(Querysort);
-		setSortQuery(Querysort);
-		navigate(`/recipe?search=${searchQuery}&sort=${Querysort}`);
-		dispatch(getListRecipe(searchQuery));
+	const goToPage = (event, index) => {
+		event.preventDefault();
+		console.log(index);
+		setPage(index);
+		console.log(page);
+		// router.push(`/home?search=${search}&field=${field}&page=${index}`);
+		// navigate(`/recipe?search=${searchQuery}&sort=${sortQuery}&page=${index}`);
+		// dispatch(getListRecipe(searchQuery, sortQuery, pages));
+
+		window.location.href = `/recipe?search=${searchQuery}&sort=${sortQuery}&page=${index}`;
 	};
 	useEffect(() => {
-		dispatch(getListRecipe(searchQuery));
+		dispatch(getListRecipe(searchQuery, sortQuery, pages));
+		// console.log(listRecipe?.data?.data?.data);
+		// for (let i = 1; i <= listRecipe?.data?.data?.pagination?.totalPage; i++) {
+		//	pages.push(i);
+		// }
+		console.log(pages);
 	}, []);
+
 	return (
 		<>
 			<Navbar />
@@ -48,25 +69,42 @@ const Search = () => {
 							placeholder="Search Recipe at here"
 							value={searchQuery}
 						/>
+						<select
+							className=""
+							style={{
+								height: "5vh",
+								width: "auto",
+							}}
+							onChange={(e) => {
+								setSortQuery(e.target.value);
+							}}
+							value={sortQuery}
+						>
+							<option value="">Sort</option>
+							<option value="title">Sortir berdasarkan title</option>
+
+							{/* <option value="location">Sortir berdasarkan Lokasi</option> */}
+							<option value="date">sortir berdasar tanggal dibuat</option>
+						</select>
 						<button type="submit" className="fa fa-search"></button>
 					</form>
 					{/* input sort */}
-					<form className="d-flex" onSubmit={(e) => onSort(e)}>
+					{/* <form className="d-flex" onSubmit={(e) => onSort(e)}>
 						<input list="sort" />
 						<datalist id="sort">
 							<option value="title" />
 							<option value="date" />
 						</datalist>
 						<button type="submit">sort</button>
-					</form>
+					</form> */}
 				</div>
 				<div className="row h-100">
-					{listRecipe.isLoading ? (
-						<div>Loading</div>
-					) : listRecipe.data === null ? (
+					{listRecipe?.isLoading ? (
+						<Code className="pt-5" />
+					) : listRecipe?.data?.data?.data?.length === 0 ? (
 						<div className={styles.noRecipe}>No relevant results found</div>
 					) : (
-						listRecipe.data.map((item, i) => (
+						listRecipe?.data?.data?.data?.map((item, i) => (
 							<div className="col-4  pt-5" key={i}>
 								<Link
 									to={`/recipe/${item.id}`}
@@ -82,6 +120,10 @@ const Search = () => {
 										style={{
 											width: "300px",
 											height: "300px",
+											borderRadius: "25px",
+										}}
+										onError={(e) => {
+											e.target.src = `${process.env.REACT_APP_MY_BACKEND}/recipe-default.jpeg`;
 										}}
 									/>
 									<div className={styles.titleRecipe}>{item.title}</div>
@@ -90,6 +132,30 @@ const Search = () => {
 						))
 					)}
 				</div>
+			</div>
+			<div className="container-fluid pt-5 justify-content-center">
+				<Pagination
+					aria-label="Page navigation example"
+					className="d-flex justify-content-center mt-5"
+				>
+					{[...Array(totalPage)].map((e, i) => (
+						<PaginationItem active={i + 1 === parseInt(pages)} key={i}>
+							<PaginationLink
+								style={{
+									color: "black",
+									backgroundColor: "yellow",
+									padding: "15px",
+									margin: "1px",
+								}}
+								onClick={(event) => {
+									goToPage(event, i + 1);
+								}}
+							>
+								{i + 1}
+							</PaginationLink>
+						</PaginationItem>
+					))}
+				</Pagination>
 			</div>
 			<Footer />
 		</>

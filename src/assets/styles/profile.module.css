@@ -40,9 +40,10 @@
 
 .titleRecipe {
     position: absolute;
-    width: 30%;
+    width: 70%;
     margin-top: 200px;
     font-size: 30px;
-    margin-right: 150px;
+    margin-right: 70px;
     color: #EFC81A;
+    background-color: #3f3a3aa2;
 }

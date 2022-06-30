@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { Code } from "react-content-loader";
 
 // import styles
 import styles from "../assets/styles/index.module.css";
@@ -36,6 +37,7 @@ const Index = () => {
 		if (token) {
 			dispatch(getDetailUser());
 		}
+		console.log(latestRecipe.isLoading);
 	}, []);
 	return (
 		<>
@@ -188,28 +190,35 @@ const Index = () => {
 						<div className={styles.container4IntroBottomContent}>
 							<div className={styles.container4IntroBottomContentJumbotron}>
 								<div className="row">
-									{latestRecipe.data.map((item, i) => (
-										<div className="col-4  pt-5" key={i}>
-											<Link
-												to={`/recipe/${item.id}`}
-												className="d-flex justify-content-center position-relative m-auto"
-												style={{
-													width: "300px",
-													height: "300px",
-												}}
-											>
-												<img
-													src={`${process.env.REACT_APP_MY_BACKEND}/${item.photo}`}
-													alt=""
+									{latestRecipe.isLoading ? (
+										<Code />
+									) : latestRecipe.data.length > 0 ? (
+										latestRecipe.data.map((item, i) => (
+											<div className="col-4  pt-5" key={i}>
+												<Link
+													to={`/recipe/${item.id}`}
+													className="d-flex justify-content-center position-relative m-auto"
 													style={{
 														width: "300px",
 														height: "300px",
 													}}
-												/>
-												<div className={styles.titleRecipe}>{item.title}</div>
-											</Link>
-										</div>
-									))}
+												>
+													<img
+														src={`${process.env.REACT_APP_MY_BACKEND}/${item.photo}`}
+														alt=""
+														style={{
+															width: "300px",
+															height: "300px",
+														}}
+														onError={(e) => {
+															e.target.src = `${process.env.REACT_APP_MY_BACKEND}/recipe-default.jpeg`;
+														}}
+													/>
+													<div className={styles.titleRecipe}>{item.title}</div>
+												</Link>
+											</div>
+										))
+									) : null}
 								</div>
 							</div>
 						</div>

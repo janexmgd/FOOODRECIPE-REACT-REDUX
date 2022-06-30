@@ -2,13 +2,13 @@
 /* eslint-disable no-useless-return */
 import React, { useState } from "react";
 import Decoration from "../components/Decoration";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import swal from "sweetalert2";
 import { toastr } from "../../src/utils/toastr";
 import { OnLogin } from "../redux/actions/auth";
 
 const LoginTest = () => {
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 	const [loading, setLoading] = useState(false);
 	const [form, setForm] = useState({
 		email: "",
@@ -54,7 +54,7 @@ const LoginTest = () => {
 							icon: "success",
 						})
 						.then(() => {
-							navigate("/");
+							window.location.href = `/`;
 						});
 				})
 				.catch((err) => {

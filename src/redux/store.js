@@ -8,8 +8,8 @@ import rootReducers from "./reducers";
 
 // redux persist config
 const persistConfig = {
-  key: "root",
-  storage,
+	key: "root",
+	storage,
 };
 const persistedReducer = persistReducer(persistConfig, rootReducers);
 

@@ -36,7 +36,7 @@ const AddRecipe = () => {
 		if (form.title === "" || form.ingredients === "" || form.video === "") {
 			swal.fire({
 				title: "Error!",
-				text: "email cannot be empty",
+				text: "form cannot be empty",
 				icon: "error",
 			});
 			setLoading(false);
@@ -59,12 +59,14 @@ const AddRecipe = () => {
 					if (err.response?.data?.message === "failed in validation") {
 						const error = err.response.data.error;
 						error.map((e) => toastr(e, "error"));
+						setLoading(false);
 					} else {
 						swal.fire({
 							title: "Error!",
 							text: err.response?.data?.message,
 							icon: "error",
 						});
+						setLoading(false);
 					}
 				});
 		}

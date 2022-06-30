@@ -31,6 +31,9 @@ const DetailRecipe = () => {
 								<img
 									src={`${process.env.REACT_APP_MY_BACKEND}/${detailRecipe.data.photo}`}
 									alt=""
+									onError={(e) => {
+										e.target.src = `${process.env.REACT_APP_MY_BACKEND}/recipe-default.jpeg`;
+									}}
 								/>
 							</div>
 						</div>
