@@ -170,7 +170,7 @@ const Profile = () => {
 	return (
 		<>
 			<Navbar />
-			{loading ? (
+			{loading || detailUser.isLoading || myRecipe.isLoading ? (
 				<Code />
 			) : (
 				<div className={styles.container}>
