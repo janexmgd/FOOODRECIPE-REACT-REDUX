@@ -184,6 +184,9 @@ const Profile = () => {
 									}
 									alt=""
 									style={{ width: "200px", height: "200px" }}
+									onError={(e) => {
+										e.target.src = `${process.env.REACT_APP_MY_BACKEND}/users-default.png`;
+									}}
 								/>
 								<h2 className="text-muted">{detailUser.data.name}</h2>
 								<div className="pt-2">
