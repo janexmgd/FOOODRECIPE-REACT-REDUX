@@ -15,6 +15,7 @@ import Profile from "../pages/Profile";
 import Search from "../pages/Search";
 import DetailRecipe from "../pages/DetailRecipe";
 import AddRecipe from "../pages/AddRecipe";
+import EditRecipe from "../pages/EditRecipe";
 
 const PrivateRoute = () => {
 	const token = localStorage.getItem("token");
@@ -50,6 +51,9 @@ const router = () => {
 				</Route>
 				<Route path="/addrecipe" element={<PrivateRoute />}>
 					<Route index element={<AddRecipe />} />
+				</Route>
+				<Route path="/recipe/edit/:id" element={<PrivateRoute />}>
+					<Route index element={<EditRecipe />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

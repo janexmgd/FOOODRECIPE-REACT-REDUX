@@ -28,7 +28,7 @@ const Profile = () => {
 		dispatch(getMyrecipe());
 		dispatch(getDetailUser());
 		// console.log(myRecipe);
-		console.log(detailUser);
+		// console.log(detailUser);
 	}, []); // eslint-disable-line
 	const onDeleted = (id) => {
 		swal

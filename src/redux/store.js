@@ -13,7 +13,7 @@ const persistConfig = {
 };
 const persistedReducer = persistReducer(persistConfig, rootReducers);
 
-const middleware = applyMiddleware(logger, promiseMiddleware);
+const middleware = applyMiddleware(promiseMiddleware);
 const store = createStore(persistedReducer, middleware);
 
 // export default store
