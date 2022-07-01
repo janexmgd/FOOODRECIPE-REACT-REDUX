@@ -37,7 +37,6 @@ const Index = () => {
 		if (token) {
 			dispatch(getDetailUser());
 		}
-		console.log(latestRecipe.isLoading);
 	}, []);
 	return (
 		<>
