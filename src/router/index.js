@@ -16,6 +16,7 @@ import Search from "../pages/Search";
 import DetailRecipe from "../pages/DetailRecipe";
 import AddRecipe from "../pages/AddRecipe";
 import EditRecipe from "../pages/EditRecipe";
+import NotFound from "../pages/NotFound";
 
 const PrivateRoute = () => {
 	const token = localStorage.getItem("token");
@@ -32,6 +33,7 @@ const router = () => {
 			<Routes>
 				<Route path="/">
 					<Route index element={<Index />} />
+					<Route path="*" element={<NotFound />} />
 				</Route>
 				<Route path="/login">
 					<Route index element={<Login />} />
@@ -54,6 +56,9 @@ const router = () => {
 				</Route>
 				<Route path="/recipe/edit/:id" element={<PrivateRoute />}>
 					<Route index element={<EditRecipe />} />
+				</Route>
+				<Route path="*">
+					<Route index element={<NotFound />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
