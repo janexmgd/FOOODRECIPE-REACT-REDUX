@@ -74,7 +74,7 @@ const EditRecipe = () => {
 				.then(async (editedRecipe) => {
 					try {
 						if (editedRecipe.isConfirmed) {
-							const res = editRecipe(data, id);
+							const res = await editRecipe(data, id);
 							swal
 								.fire({
 									title: "Success!",
